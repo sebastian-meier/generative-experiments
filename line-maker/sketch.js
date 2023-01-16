@@ -52,7 +52,7 @@ function setup() {
   ckCenter = createCheckbox('Cross', false);
   ckCenter.position(10, sketchHeight + 50 + 1 + 50);
 
-  ckGap = createCheckbox('Gap', true);
+  ckGap = createCheckbox('Gap', false);
   ckGap.position(10, sketchHeight + 50 + 1 + 75);
 
   sldOverlap = createSlider(0,1,0.7, 0.01);
@@ -61,6 +61,12 @@ function setup() {
 
   sldFill = createSlider(0,1,1, 0.01);
   sldFill.position(110, sketchHeight + 75);
+
+  createDiv('Higher value less overlaps')
+    .position(285, sketchHeight + 50 + 4);
+  
+  createDiv('Percentage of space to be filled')
+    .position(285, sketchHeight + 75 + 4);
 
   sctShape = createSelect();
   sctShape.position(135, sketchHeight + 20);
